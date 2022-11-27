@@ -1,0 +1,110 @@
+.footer {
+    -webkit-text-size-adjust: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.6em;
+    min-width: 1000px;
+    background-color: #faf3ff;
+    color: #5A5A5A;
+    font-size: 13px;
+    padding: 30px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    -webkit-text-size-adjust: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.6em;
+    color: #5A5A5A;
+    font-size: 13px;
+    margin: 0 auto;
+    min-width: 988px;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    box-sizing: content-box;
+    max-width: 1100px !important;
+}
+
+.footer:after {
+    clear: both;
+    content: '';
+    display: block;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.footer a {
+    color: #5A5A5A;
+    border-bottom-color: rgba(238, 238, 238, .3)
+}
+
+.footer-column {
+    -webkit-text-size-adjust: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.6em;
+    color: #5A5A5A;
+    font-size: 13px;
+    float: left;
+    width: 25%;
+}
+
+.footer-column-header {
+    -webkit-text-size-adjust: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.6em;
+    margin-top: 10px;
+    color: #5A5A5A;
+    font-size: 15px;
+    border-bottom-color: rgba(255, 255, 255, .3);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-paytypes-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.footer-paytypes {
+    padding-left: 0;
+}
+
+.footer-paytypes-two {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-paytypes li {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+
+}
+
+.footer-paytypes li:last-child {
+    margin-right: 0px;
+}
+
+.footer-paytypes img {
+    height: 26px;
+}
+
+.footer-legalinfo-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.container:after {
+    clear: both;
+    content: '';
+    display: block;
+    line-height: 0;
+    visibility: hidden;
+}
+
