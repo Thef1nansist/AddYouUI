@@ -9,9 +9,10 @@ import { UserComponent } from './components/user/user.component';
 import { AuthGuard } from './components/guards/auth.guard';
 import { InvAuthGuard } from './components/guards/invauth.guard';
 import {UserAuthGuard} from './components/guards/authUser.guard'
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
-  {path: '', component: AppComponent},
+  {path: '', component: DashboardComponent},
   {path: 'login', component: LoginComponent, canActivate: [InvAuthGuard]},
   {path: 'signup', component: SignupComponent, canActivate: [InvAuthGuard]},
   {path: 'admin', component: AdminComponent, canActivate: [AuthGuard]},

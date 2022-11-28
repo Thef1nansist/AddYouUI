@@ -17,20 +17,28 @@ export class ApiService {
     return this.http.post<any>(this.baseUrlCompanies, companyObj );
   }
 
+  addProduct(productObj: any) {
+    return this.http.post<any>(`${this.baseUrlCompanies}/AddProduct`, productObj);
+  }
+
   getCompanyAdmin(AdminId: string) {
-    return this.http.put<any>(this.baseUrlCompanies, JSON.stringify(AdminId));
+    return this.http.get(`${this.baseUrlCompanies}/GetByCompaniesIdUser?userId=${AdminId}`);
   }
 
   getProductItemByUser(userId: string) {
-    return this.http.get(`${this.baseUrlCompanies}/GetCoffeeItemByUserAsync?idUser=${userId}`);
+    return this.http.get(`${this.baseUrlCompanies}/GetProductByUserAsync?idUser=${userId}`);
   }
 
   getByCompaniesIdUser() {
-    return this.http.get(`${this.baseUrlCompanies}/GetByCoffeeHousesIdUser?userId=${localStorage.getItem('UserId')}`);
+    return this.http.get(`${this.baseUrlCompanies}/GetByCompaniesIdUser?userId=${localStorage.getItem('UserId')}`);
   }
 
-  GetPopularCompanies() {
+  getPopularCompanies() {
     return this.http.get(`${this.baseUrlCompanies}/GetPopularCompanies`);
+  }
+
+  getProductsByCompanyId(companyId: string) {
+    return this.http.get(`${this.baseUrlCompanies}/GetByCompanyId?companyId=${companyId}`)
   }
 
   SellProductAsync(userId: string, id: Int32Array) {

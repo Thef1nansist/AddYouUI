@@ -47,6 +47,7 @@ export class LoginComponent implements OnInit {
             this.toast.success({detail: "SUCCESS", summary: "Вы успешно авторизованы!", duration: 5000})
             this.auth.storeToken(res.access_token, res.isAdmin);
             localStorage.setItem('admin', res.isAdmin)
+            console.log(res);
             // this.header.logging = true;
             // this.header.unlogin = false;
             this.router.navigate(['/admin'])

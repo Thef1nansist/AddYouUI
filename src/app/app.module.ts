@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './components/login/login.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './components/signup/signup.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { UserComponent } from './components/user/user.component';
@@ -30,6 +30,8 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     FooterComponent,
     DashboardComponent,
     SideNavComponent,
+    // NgbModule,
+    // FormsModule
   ],
   imports: [
     BrowserModule,

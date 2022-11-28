@@ -1,16 +1,17 @@
-<router-outlet></router-outlet>
+
 <lib-ng-toast></lib-ng-toast>
+
 <app-header (sideNavToggled)="sideNavStatus = $event;"></app-header>
 
 <main>
     <div class="app-side-nav" [ngClass]="{'app-side-nav-open': sideNavStatus}">
     <app-side-nav [sideNavStatus]="sideNavStatus" ></app-side-nav>
+  
     </div>
-
     <div class="display-area p-3" [ngClass]="{'display-area-shrink': sideNavStatus}">
-        <p>MainDisplay</p>
+        <router-outlet></router-outlet>
     </div>
 
     
 </main>
-<app-footer></app-footer> 
+<!-- <app-footer></app-footer>  -->
