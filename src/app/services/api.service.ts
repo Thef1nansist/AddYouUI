@@ -43,6 +43,10 @@ export class ApiService {
 
   SellProductAsync(userId: string, id: Int32Array) {
     return this.http.get(`${this.baseUrlCompanies}/sellProduct/${id}/${userId}`);
-  } 
+  }
+
+  getProductById(productId: string) {
+    return this.http.get(`${this.baseUrlCompanies}/GetProductById?productId=${productId}`)
+  }
 
 }

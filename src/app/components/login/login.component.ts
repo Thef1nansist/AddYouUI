@@ -59,7 +59,7 @@ export class LoginComponent implements OnInit {
             localStorage.setItem('admin', res.isAdmin)
             // this.header.logging = true;
             // this.header.unlogin = false;
-            this.router.navigate(['/default'])
+            this.router.navigate([''])
           }
           else {
             this.toast.error({detail: "ERROR", summary: "Введены не верные креда!", duration: 5000})

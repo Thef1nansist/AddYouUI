@@ -17,6 +17,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     FooterComponent,
     DashboardComponent,
     SideNavComponent,
+    ProductsComponent,
+    ProductComponent,
     // NgbModule,
     // FormsModule
   ],
@@ -39,7 +43,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     NgbModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgToastModule
+    NgToastModule,
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

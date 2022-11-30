@@ -1,6 +1,6 @@
 <ul>
-    <li *ngFor="let item of companies">
-        <a routerLink="/company/{{item.id}}">
+    <li *ngFor="let item of products">
+        <a routerLink="/product/{{item.id}}">
         <img src="{{item.imageSource}}" alt="">
         <div class="content">
             <div class="name">
@@ -13,10 +13,14 @@
                 <div class="origins">
                     <span>Description: {{item.description}}</span>
                 </div>
+                <div class="price">
+                    <span>
+                        {{item.price}} руб.
+                    </span>
+                </div>
             </div>
         </div>
     </a>
-    <!-- <app-products [products]="item.products" ></app-products> -->
     </li>
 </ul>
 

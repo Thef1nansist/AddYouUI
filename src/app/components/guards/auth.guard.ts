@@ -15,8 +15,13 @@ export class AuthGuard implements CanActivate {
   ) {}
 
   canActivate(): boolean {
-    if(this.auth.isLoggedIn()) {
+    if(this.auth.isLoggedIn() && this.auth.isAdmin()) {
       return true
+    }
+    else if (this.auth.isLoggedIn()) {
+      this.toast.error({detail:"ERROR", summary:"You havent permissions!"});
+      this.router.navigate([''])
+      return false;
     }
     else {
       this.toast.error({detail:"ERROR", summary:"Please Login First!"});

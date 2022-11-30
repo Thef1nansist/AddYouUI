@@ -25,7 +25,7 @@ export class AuthService {
 
   storeToken(tokenValue: string, isAdmin: boolean) {
     localStorage.setItem('token', tokenValue);
-    localStorage.setItem(tokenValue, `${isAdmin}`)
+    localStorage.setItem('isAdmin', `${isAdmin}`)
   }
 
   getToken(){
@@ -37,8 +37,11 @@ export class AuthService {
   }
 
   isAdmin(): boolean { 
-    console.log(`${this.getToken()}`)
-    return !!localStorage.getItem(`${this.getToken()}`);
+    if (localStorage.getItem('isAdmin') == 'true')
+    {
+      return true;
+    }
+    return false;
   }
 
   signOut() {

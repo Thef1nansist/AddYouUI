@@ -10,12 +10,16 @@ import { AuthGuard } from './components/guards/auth.guard';
 import { InvAuthGuard } from './components/guards/invauth.guard';
 import {UserAuthGuard} from './components/guards/authUser.guard'
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ProductComponent } from './components/product/product.component';
 
 const routes: Routes = [
   {path: '', component: DashboardComponent},
   {path: 'login', component: LoginComponent, canActivate: [InvAuthGuard]},
   {path: 'signup', component: SignupComponent, canActivate: [InvAuthGuard]},
   {path: 'admin', component: AdminComponent, canActivate: [AuthGuard]},
+  {path: 'company/:id', component: ProductsComponent},
+  {path: 'product/:id', component: ProductComponent},
   {path: 'default', component: UserComponent, canActivate: [AuthGuard]},
   {path: '**', component: NotFoundComponent}
 ];
